@@ -1,0 +1,16 @@
+[
+  {
+    "name": "ChatGPT",
+    "slug": "chatgpt",
+    "description": "AI chatbot and writing assistant",
+    "category": "AI Tool",
+    "url": "https://openai.com"
+  },
+  {
+    "name": "Midjourney",
+    "slug": "midjourney",
+    "description": "AI image generation tool",
+    "category": "AI Tool",
+    "url": "https://midjourney.com"
+  }
+]
