@@ -1,19 +1,3 @@
-// @ts-nocheck
-import data from "../../../data/projects.json";
-
-export default function Page({ params }) {
-  const project = data.find((p) => p.slug === params.slug);
-
-  if (!project) {
-    return <div>Project not found</div>;
-  }
-
-  return (
-    <div>
-      <h1>{project.name}</h1>
-      <p>{project.description}</p>
-      <p>Category: {project.category}</p>
-      <a href={project.url}>Visit website</a>
-    </div>
-  );
+export default function Page() {
+  return <h1>Project Page</h1>
 }
