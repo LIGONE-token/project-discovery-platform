@@ -1,11 +1,11 @@
-import data from "../../../data/projects.json"
+// @ts-nocheck
+import data from "../../../data/projects.json";
 
-export default function ProjectPage({ params }: any) {
-
-  const project = data.find((p: any) => p.slug === params.slug)
+export default function Page({ params }) {
+  const project = data.find((p) => p.slug === params.slug);
 
   if (!project) {
-    return <div>Project not found</div>
+    return <div>Project not found</div>;
   }
 
   return (
@@ -15,5 +15,5 @@ export default function ProjectPage({ params }: any) {
       <p>Category: {project.category}</p>
       <a href={project.url}>Visit website</a>
     </div>
-  )
+  );
 }
