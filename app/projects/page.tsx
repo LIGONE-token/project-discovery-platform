@@ -1,18 +1,20 @@
-import data from "../../data/projects.json";
+import data from "../../../data/projects.json"
 
-export default function Projects() {
+export default function ProjectPage({ params }: { params: { slug: string } }) {
+
+  const project = data.find(p => p.slug === params.slug)
+
+  if (!project) {
+    return <div>Project not found</div>
+  }
+
   return (
     <div>
-      <h1>Projects</h1>
+      <h1>{project.name}</h1>
+      <p>{project.description}</p>
+      <p>Category: {project.category}</p>
 
-      {data.map((project) => (
-        <div key={project.slug}>
-          <h2>
-            <a href={"/projects/" + project.slug}>{project.name}</a>
-          </h2>
-          <p>{project.description}</p>
-        </div>
-      ))}
+      <a href={project.url}>Visit website</a>
     </div>
-  );
+  )
 }
