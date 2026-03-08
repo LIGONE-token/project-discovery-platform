@@ -1,18 +1,18 @@
-import data from "../../data/projects.json"
+import data from "../../data/projects.json";
 
 export default function Projects() {
   return (
     <div>
-      <h1>All Projects</h1>
+      <h1>Projects</h1>
 
-      {data.map((p) => (
-        <div key={p.slug}>
+      {data.map((project) => (
+        <div key={project.slug}>
           <h2>
-            <a href={"/projects/" + p.slug}>{p.name}</a>
+            <a href={"/projects/" + project.slug}>{project.name}</a>
           </h2>
-          <p>{p.description}</p>
+          <p>{project.description}</p>
         </div>
       ))}
     </div>
-  )
+  );
 }
